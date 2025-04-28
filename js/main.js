@@ -142,19 +142,9 @@ setInterval(
 );
 
 function clear() {
-  let grd = canvas.createRadialGradient(
-    tela.width / 2,
-    tela.height / 2,
-    0,
-    tela.width / 2,
-    tela.height / 2,
-    tela.width
-  );
-  grd.addColorStop(0, "rgba(255,255,255,0.1)"); // Thay đổi từ "rgba(20,20,20,1)"
-  grd.addColorStop(1, "rgba(255,255,255,0)"); // Thay đổi từ "rgba(0,0,0,0)"
-  canvas.globalAlpha = 0.16;
-  canvas.fillStyle = grd;
-  canvas.fillRect(0, 0, tela.width, tela.height);
+  // Thay đổi toàn bộ hàm thành:
+  canvas.clearRect(0, 0, tela.width, tela.height);
+  // Điều này sẽ xóa hoàn toàn canvas thay vì vẽ gradient
 }
 
 
